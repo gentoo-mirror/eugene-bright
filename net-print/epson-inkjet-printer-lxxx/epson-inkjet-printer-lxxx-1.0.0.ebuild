@@ -10,7 +10,7 @@ RPM_PKG_NAME="epson-inkjet-printer-201401w-${PV}"
 
 DESCRIPTION="Epson Inkjet Printer Driver for L130 Series, L132 Series, L220 Series, L222 Series, L310 Series, L312 Series, L360 Series, L362 Series, L365 Series, L366 Series, L455 Series, L456 Series"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
-SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/03/45/41/92e9c9254f0ee4230a069545ba27ec2858a2c457/${RPM_PKG_NAME}-1lsb3.2.src.rpm"
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/03/45/41/d95c03482376873661d7a8d4c165b385cd082cf3/${RPM_PKG_NAME}-1lsb3.2.x86_64.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
