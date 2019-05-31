@@ -1,0 +1,12 @@
+DEFINED_PHASES=unpack
+DEPEND=net-print/cups app-arch/rpm >=app-arch/rpm2targz-9.0.0.3g
+DESCRIPTION=Epson Inkjet Printer Driver for L130 Series, L132 Series, L220 Series, L222 Series, L310 Series, L312 Series, L360 Series, L362 Series, L365 Series, L366 Series, L455 Series, L456 Series
+EAPI=7
+HOMEPAGE=http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=net-print/cups
+SLOT=0
+SRC_URI=https://download3.ebz.epson.net/dsc/f/03/00/03/45/41/92e9c9254f0ee4230a069545ba27ec2858a2c457/epson-inkjet-printer-201401w-1.0.0-1lsb3.2.src.rpm
+_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	rpm	f52cfa3a435468d86d3b49c357b9cb35
+_md5_=b6f9e61e954bbcced500cbc9da000064
