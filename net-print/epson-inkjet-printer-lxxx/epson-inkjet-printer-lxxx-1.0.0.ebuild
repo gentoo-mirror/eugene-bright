@@ -40,6 +40,6 @@ src_install () {
 	exeinto /usr/libexec/cups/filter/
 	doexe cups/lib/filter/epson_inkjet_printer_filter
 
-	insinto "/usr/share/ppd/${P}"
+	insinto "/usr/share/ppd/${PN}"
 	doins ppds/Epson/*
 }
