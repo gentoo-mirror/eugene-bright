@@ -24,7 +24,9 @@ DEPEND="$RDEPEND"
 S="${WORKDIR}/opt/${RPM_PKG_PREFIX}"
 
 src_unpack () {
-    rpm_src_unpack ${A}
-    cd "$S"
-    dodoc doc/README
+	rpm_src_unpack ${A}
+}
+
+src_install () {
+	dodoc -r doc
 }
