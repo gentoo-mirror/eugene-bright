@@ -21,25 +21,30 @@ IUSE=""
 RDEPEND="net-print/cups"
 DEPEND="$RDEPEND"
 
-S="${WORKDIR}/opt/${RPM_PKG_PREFIX}"
+#S="${WORKDIR}/opt/${RPM_PKG_PREFIX}"
+S="${WORKDIR}"
 
 src_unpack () {
 	rpm_src_unpack ${A}
 
-	cd "${S}/ppds/Epson/"
-	for i in *
-	do
-		gunzip "$i"
-	done
+	#cd "${S}/ppds/Epson/"
+	#for i in *
+	#do
+	#	gunzip "$i"
+	#done
 }
 
 src_install () {
-	dodoc -r doc
-	dolib.so lib64/*
+	#dodoc -r doc
+	#dolib.so lib64/*
 
-	exeinto /usr/libexec/cups/filter/
-	doexe cups/lib/filter/epson_inkjet_printer_filter
+	#exeinto /usr/libexec/cups/filter/
+	#doexe cups/lib/filter/epson_inkjet_printer_filter
 
-	insinto "/usr/share/ppd/${PN}"
-	doins ppds/Epson/*
+	#insinto "/usr/share/ppd/${PN}"
+	#doins ppds/Epson/*
+
+	insinto "/"
+	doins -r opt
+	dosym /lib64/ld-linux-x86-64.so.2 "${D}/lib64/ld-lsb-x86-64.so.3"
 }
