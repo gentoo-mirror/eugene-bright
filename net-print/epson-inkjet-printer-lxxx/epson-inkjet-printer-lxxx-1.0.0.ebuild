@@ -25,9 +25,21 @@ S="${WORKDIR}/opt/${RPM_PKG_PREFIX}"
 
 src_unpack () {
 	rpm_src_unpack ${A}
+
+	cd "${S}/ppds/Epson/"
+	for i in *
+	do
+		gunzip "$i"
+	done
 }
 
 src_install () {
 	dodoc -r doc
 	dolib.so lib64/*
+
+	exeinto /usr/libexec/cups/filter/
+	doexe cups/lib/filter/epson_inkjet_printer_filter
+
+	insinto "/usr/share/ppd/${P}"
+	doins ppds/Epson/*
 }
