@@ -46,5 +46,5 @@ src_install () {
 
 	insinto "/"
 	doins -r opt
-	dosym /lib64/ld-linux-x86-64.so.2 "${D}/lib64/ld-lsb-x86-64.so.3"
+	dosym ./ld-linux-x86-64.so.2 "/lib64/ld-lsb-x86-64.so.3"
 }
