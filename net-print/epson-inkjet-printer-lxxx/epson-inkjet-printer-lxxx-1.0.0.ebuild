@@ -29,4 +29,5 @@ src_unpack () {
 
 src_install () {
 	dodoc -r doc
+	dolib.so lib64/*
 }
