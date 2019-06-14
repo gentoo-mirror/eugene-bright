@@ -25,5 +25,6 @@ S="${WORKDIR}/opt/${RPM_PKG_PREFIX}"
 
 src_unpack () {
     rpm_src_unpack ${A}
-    dodoc -r doc
+    cd "$S"
+    dodoc doc/README
 }
