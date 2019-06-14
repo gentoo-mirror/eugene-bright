@@ -47,4 +47,6 @@ src_install () {
 	insinto "/"
 	doins -r opt
 	dosym ./ld-linux-x86-64.so.2 "/lib64/ld-lsb-x86-64.so.3"
+	fperms +x /opt/epson-inkjet-printer-201401w/cups/lib/filter/epson_inkjet_printer_filter
+	dosym /opt/epson-inkjet-printer-201401w/ppds/Epson/ "/usr/share/cups/model/${PN}"
 }
