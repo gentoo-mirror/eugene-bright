@@ -6,7 +6,8 @@ EAPI=6
 
 inherit rpm
 
-RPM_PKG_NAME="epson-inkjet-printer-201401w-${PV}"
+RPM_PKG_PREFIX="epson-inkjet-printer-201401w"
+RPM_PKG_NAME="${RPM_PKG_PREFIX}-${PV}"
 
 DESCRIPTION="Epson Inkjet Printer Driver for L130 Series, L132 Series, L220 Series, L222 Series, L310 Series, L312 Series, L360 Series, L362 Series, L365 Series, L366 Series, L455 Series, L456 Series"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
@@ -20,8 +21,9 @@ IUSE=""
 RDEPEND="net-print/cups"
 DEPEND="$RDEPEND"
 
-S="${WORKDIR}/${RPM_PKG_NAME}"
+S="${WORKDIR}/opt/${RPM_PKG_PREFIX}"
 
 src_unpack () {
     rpm_src_unpack ${A}
+    dodoc -r doc
 }
