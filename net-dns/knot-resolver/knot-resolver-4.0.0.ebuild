@@ -41,7 +41,12 @@ src_configure() {
 
 pkg_setup() {
 	enewgroup knot-resolver
-	enewuser kresd -1 -1 /var/lib/knot-resolver knot-resolver
+	enewuser knot-resolver -1 -1 /var/lib/knot-resolver knot-resolver
+}
+
+src_install() {
+	diropts -o knot-resolver -g knot-resolver -m 0750
+	keepdir /var/lib/cache/knot-resolver
 }
 
 # TODO:
