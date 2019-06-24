@@ -32,17 +32,29 @@ RDEPEND="
 DEPEND="${RDEPEND}
 "
 
-src_configure() {
-        local emesonargs=(
-                -Dsystemd_files=$(usex systemd enabled disabled)
-        )
-        meson_src_configure
-}
-
 pkg_setup() {
 	enewgroup knot-resolver
 	enewuser knot-resolver -1 -1 /var/lib/knot-resolver knot-resolver
+}
+
+src_configure() {
+	local emesonargs=(
+			-Dsystemd_files=$(usex systemd enabled disabled)
+	)
+
+	meson_src_configure
+}
+
+src_install() {
+	meson_src_install
 
 	diropts -o knot-resolver -g knot-resolver -m 0750
-	keepdir /var/lib/cache/knot-resolver
+
+	# TODO FHS
+	dodir /var/lib/cache/${PN}
+	fowners knot-resolver:knot-resolver /var/lib/cache/${PN}
+	fperms 0750 /var/lib/cache/${PN}
+
+	fowners -R knot-resolver:knot-resolver /etc/knot-resolver
+	fperms -R 0750 /etc/knot-resolver
 }
