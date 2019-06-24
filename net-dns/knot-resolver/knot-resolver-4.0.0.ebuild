@@ -52,8 +52,6 @@ src_install() {
 
 	# TODO FHS
 	dodir /var/lib/cache/${PN}
-	fowners knot-resolver:knot-resolver /var/lib/cache/${PN}
-	fperms 0750 /var/lib/cache/${PN}
 
 	fowners -R knot-resolver:knot-resolver /etc/knot-resolver
 	fperms -R 0750 /etc/knot-resolver
