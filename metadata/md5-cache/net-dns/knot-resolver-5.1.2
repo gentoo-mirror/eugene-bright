@@ -1,15 +1,15 @@
 BDEPEND=>=dev-util/meson-0.54.0 >=dev-util/ninja-1.8.2
 DEFINED_PHASES=compile configure install setup test
-DEPEND=>=net-dns/knot-2.8.0 >=dev-libs/libuv-1.7.0 dev-lang/luajit:2 dev-lua/luasocket dev-lua/luasec net-libs/libnsl net-libs/gnutls dnstap? ( >=dev-libs/protobuf-3.0 dev-libs/protobuf-c dev-libs/fstrm )
+DEPEND=>=net-dns/knot-2.8.0 >=dev-libs/libuv-1.7.0 dev-lang/luajit:2 dev-lua/luasocket dev-lua/luasec net-libs/libnsl net-libs/gnutls dev-db/lmdb dnstap? ( >=dev-libs/protobuf-3.0 dev-libs/protobuf-c dev-libs/fstrm ) >=dev-util/meson-0.46.0 virtual/pkgconfig dev-util/ninja
 DESCRIPTION=A caching full DNS resolver implementation written in C and LuaJIT
 EAPI=7
 HOMEPAGE=https://www.knot-resolver.cz
 IUSE=dnstap systemd +pie
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=>=net-dns/knot-2.8.0 >=dev-libs/libuv-1.7.0 dev-lang/luajit:2 dev-lua/luasocket dev-lua/luasec net-libs/libnsl net-libs/gnutls dnstap? ( >=dev-libs/protobuf-3.0 dev-libs/protobuf-c dev-libs/fstrm )
+RDEPEND=>=net-dns/knot-2.8.0 >=dev-libs/libuv-1.7.0 dev-lang/luajit:2 dev-lua/luasocket dev-lua/luasec net-libs/libnsl net-libs/gnutls dev-db/lmdb dnstap? ( >=dev-libs/protobuf-3.0 dev-libs/protobuf-c dev-libs/fstrm )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://secure.nic.cz/files/knot-resolver/knot-resolver-4.0.0.tar.xz
+SRC_URI=https://secure.nic.cz/files/knot-resolver/knot-resolver-5.1.2.tar.xz
 _eclasses_=meson	71d293a701d6362387e1214da368c848	multilib	2477ebe553d3e4d2c606191fe6c33602	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	bae936266b68e0c374a74f2b0d0aaa44	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	user	7b7fc6ec5eb1c1eee55b0609f01e7362	user-info	a2abd4e2f4c3b9b06d64bf1329359a02
-_md5_=72c3096893507f783c4e039f30c8af97
+_md5_=87756f40d0ea03b71099eb2bc42a928d

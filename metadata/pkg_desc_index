@@ -1,4 +1,4 @@
 mail-filter/opendkim 2.10.3-r17: A milter providing DKIM signing and verification
-net-dns/knot-resolver 4.0.0: A caching full DNS resolver implementation written in C and LuaJIT
+net-dns/knot-resolver 5.1.2: A caching full DNS resolver implementation written in C and LuaJIT
 net-mail/dovecot 2.3.6-r2: An IMAP and POP3 server written with security primarily in mind
 sys-cluster/glusterfs 6.3-r2: GlusterFS is a powerful network/cluster filesystem
